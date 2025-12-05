@@ -1,12 +1,13 @@
+require('dotenv').config();
 const express = require('express');
 
 const app = express();
-const port = 4000;
+// const port = 4000;
 
 app.get('/',(req, res)=>{
     res.send('<h1>Home</h1>');
 });
 
-app.listen(port,()=>{
-    console.log(`Server Started ! at port: ${port}`)
+app.listen(process.env.PORT,()=>{
+    console.log(`Server Started ! at port: ${process.env.PORT}`)
 });
